@@ -1,0 +1,8 @@
+# NEST is not on PyPI. The paper used NEST 3.8.0; the scripts also run on 3.9.
+# Docker:  docker run --rm -it -v "$PWD":/work -w /work nest/nest-simulator:3.8 bash
+#          then: pip install pyspike
+# conda:   conda install -c conda-forge nest-simulator=3.8
+numpy
+scipy
+matplotlib
+pyspike
