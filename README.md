@@ -75,27 +75,6 @@ quick look use `--step 1.0 --tmax 2000`.
   default seed and one thread at every grid point.
 - `raster.py` and `phase_isi.py` run once with one thread.
 
-## Notes on the original scripts
-
-These scripts were reorganised from the ones used for the paper. Model,
-parameters and analysis are unchanged. With NEST 3.9 and shortened runs
-(1 s, two decay times), `tau_sweep.py`, `peak_tau.py` and the network of
-`raster.py` gave bit-identical spikes, PSDs, correlations, SPIKE-distances
-and peak frequencies to the original scripts. `phase_isi.py` was only run,
-not compared, because the original was left at other settings. What
-differs:
-
-- Figs. 2 and 3: the original runs (February 2026) used a version of the
-  sweep with one decay time fixed, 16 threads, and NEST's default seed with
-  numpy seed 123. `tau_sweep.py --vary` does the same sweep with the seeds
-  above, so the maps agree in structure but not point by point. The
-  original plotting script for these two figures was not found;
-  `tau_sweep_plot.py` draws the same quantities in the Fig. 1 layout.
-- Fig. 5: the plotting code was commented out in the original
-  `study2test.py` and is reassembled in `phase_isi.py`. The published
-  panels span 10 s, which is the default here.
-- The multimeter that the original scripts attached to every neuron is
-  still created, so node ids are unchanged, but it only records when asked.
 
 ## Citation
 
